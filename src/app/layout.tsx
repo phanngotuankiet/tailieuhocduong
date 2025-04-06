@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VnDoc Clone - Tài liệu học tập",
-  description: "Tài liệu, đề thi, trắc nghiệm, giải bài tập, học tập, tiếng Anh",
+  title: "Tài liệu Học Đường",
+  description: "Tủ sách điện tử tương tác cho học sinh",
 };
 
 export default function RootLayout({
@@ -17,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className={inter.className}>
-        <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="min-h-screen bg-gray-50">
           {children}
-        </div>
+        </main>
+        <Footer />
       </body>
     </html>
   );
