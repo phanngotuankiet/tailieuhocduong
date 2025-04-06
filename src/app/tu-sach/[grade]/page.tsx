@@ -31,7 +31,7 @@ export default function GradePage({ params }: { params: { grade: string } }) {
   const gradeName = `Lớp ${params.grade.split('-')[1]}`
 
   return (
-    <div className="bg-gradient-to-b from-amber-300 to-white py-8">
+    <div className="min-h-screen bg-gradient-to-b from-amber-300 to-white py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900">{gradeName}</h1>
